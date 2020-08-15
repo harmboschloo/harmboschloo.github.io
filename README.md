@@ -9,6 +9,11 @@
 - [readme2](./elm-ecs-2.0/readme2)
 - [orbits](./elm-ecs-2.0/orbits)
 
+## elm-ecs-benchmarks
+
+- [elm-ecs-benchmarks](./elm-ecs-benchmarks)
+
+
 ## vector-racer examples
 
 - [inspect track](./vector-racer/inspectTrack)

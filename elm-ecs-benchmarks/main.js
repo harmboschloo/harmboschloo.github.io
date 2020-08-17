@@ -5358,16 +5358,19 @@ var $author$project$Main$ecsFrameworkToString = function (ecsFramework) {
 			return 'ElmEcs';
 		case 1:
 			return 'ElmGameLogic';
-		default:
+		case 2:
 			return 'JsEcsy';
+		default:
+			return 'JsHyperrEcs';
 	}
 };
 var $author$project$Main$ElmGameLogic = 1;
 var $author$project$Main$JsEcsy = 2;
+var $author$project$Main$JsHyperrEcs = 3;
 var $author$project$Main$ecsFrameworks = _Utils_Tuple2(
 	0,
 	_List_fromArray(
-		[1, 2]));
+		[1, 2, 3]));
 var $author$project$Main$ecsFrameworkFromString = A2($author$project$Main$fromString, $author$project$Main$ecsFrameworkToString, $author$project$Main$ecsFrameworks);
 var $elm$json$Json$Encode$int = _Json_wrap;
 var $elm$json$Json$Encode$object = function (pairs) {
@@ -6491,6 +6494,8 @@ var $author$project$Main$initEcs = function (properties) {
 					return $author$project$Main$ElmGameLogicUpdate3(
 						$author$project$ElmGameLogic$initUpdate3(properties));
 			}
+		case 2:
+			return $author$project$Main$ExternalModel;
 		default:
 			return $author$project$Main$ExternalModel;
 	}
@@ -7624,7 +7629,7 @@ var $author$project$Main$ecsFrameworkDescription = function (ecsFramework) {
 					[
 						$elm$html$Html$text('justgook/elm-game-logic')
 					]));
-		default:
+		case 2:
 			return A2(
 				$elm$html$Html$a,
 				_List_fromArray(
@@ -7634,6 +7639,17 @@ var $author$project$Main$ecsFrameworkDescription = function (ecsFramework) {
 				_List_fromArray(
 					[
 						$elm$html$Html$text('https://ecsy.io/')
+					]));
+		default:
+			return A2(
+				$elm$html$Html$a,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$href('https://github.com/gohyperr/hyperr-ecs')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('https://github.com/gohyperr/hyperr-ecs')
 					]));
 	}
 };
